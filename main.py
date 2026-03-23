@@ -7,6 +7,7 @@ import joblib
 @st.cache_resource
 def load_model():
     model = joblib.load("email_ai_spam.pkl")  
+    
     return model
 assets  = load_model()
 model = assets['model']
