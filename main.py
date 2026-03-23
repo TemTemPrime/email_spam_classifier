@@ -23,7 +23,7 @@ if st.button("predict"):
         st.warning("Please enter an email message.")
     else:
         vector_email = vectorizer.transform([email])
-        prediction = model.predict([vector_email])
+        prediction = model.predict(vector_email)
         if prediction == 1:
             st.error("🚨 This email is SPAM")
         else:
