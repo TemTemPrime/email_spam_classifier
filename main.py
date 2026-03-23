@@ -6,7 +6,7 @@ import joblib
 
 @st.cache_resource
 def load_model():
-    model = joblib.load("matcher_assets.pkl")  
+    model = joblib.load("email_ai_spam.pkl")  
     return model
 assets  = load_model()
 model = assets['model']
@@ -27,4 +27,3 @@ if st.button("predict"):
             st.error("🚨 This email is SPAM")
         else:
             st.success("✅ This email is NOT Spam")
-            
